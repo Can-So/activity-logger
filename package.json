@@ -1,6 +1,6 @@
 {
   "name": "activity-logging-microservice",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Microservice to enable interaction with IPFS and the Ethereum blockchain",
   "main": "cluster.js",
   "scripts": {
