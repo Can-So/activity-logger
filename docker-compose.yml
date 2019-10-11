@@ -1,0 +1,22 @@
+version: '3'
+services:
+  logging-service:
+    build: ./
+    ports:
+      - "3033:3033"
+    environment:
+      THREADS: 2              
+      NETWORK: "ropsten"
+      SERVER_PORT: 3033
+      ETH_RPC_URL: http://localhost
+      ACTIVITY_LOGGER_ADDR: 0x1234
+    networks:
+      logging-service-net:
+        ipv4_address: 172.27.1.3
+
+networks:
+  logging-service-net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.27.0.0/16
